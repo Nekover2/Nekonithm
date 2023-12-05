@@ -134,7 +134,7 @@ int main()
     mpr121_init(I2C_PORT, MPR121_ADDR, &mpr121);
     mpr121_set_thresholds(MPR121_TOUCH_THRESHOLD,
                           MPR121_RELEASE_THRESHOLD, &mpr121);
-
+    mpr121_init(I2C_PORT, 0x5A, &mpr121);
     // Initialise data variables
     uint16_t touched;
     mpr121_set_debounce(MPR121_TOUCH_THRESHOLD, MPR121_RELEASE_THRESHOLD, &mpr121);
